@@ -1,0 +1,262 @@
+/* ======= Preloader Start  ====== */
+.preloader {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #fff;
+    background-color: white;
+    font-family: Consolas, Menlo, Monaco, monospace;
+    font-weight: bold;
+    font-size: 30vh;
+    z-index: 1099;
+}
+
+.preloader span {
+    display: inline-block;
+    /* opacity: 0.8; */
+    animation: pulse 0.4s alternate infinite ease-in-out;
+    font-size: 100px;
+}
+
+.preloader span:nth-child(odd) {
+    animation-delay: 0.4s;
+    z-index: 1100;
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(0.8);
+        /* opacity: 0.5; */
+    }
+}
+
+
+/* /// Animation timing /// */
+.preloader.hidden {
+    animation: fadeOut 3s;
+    animation-fill-mode: forwards;
+    z-index: 999999999999;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* CSS end - For Live Project */
+
+
+
+/* ========  ========= */
+/*  Burger menu Start */
+/* ======= ======== */
+
+.burger {
+    width: 60px;
+    height: 53px;
+    line-height: 60px;
+    position: relative;
+    margin-left: auto;
+}
+
+.burger__menu {
+    position: absolute;
+    width: 60%;
+    top: 10px;
+    right: 0;
+}
+
+.burger__menu span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 6px 0;
+    background-color: #333;
+    border-radius: 8px;
+    transition: 0.25s width ease-out;
+}
+
+.burger__menu span:nth-child(1) {
+    transition-delay: 0.5s;
+    width: 40%;
+}
+
+.burger__menu span:nth-child(2) {
+    transition-delay: 0.625s;
+    width: 60%;
+
+}
+
+.burger__menu span:nth-child(3) {
+    transition-delay: 0.75s;
+    width: 80%;
+
+}
+
+.burger__close {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.burger__close span {
+    transition: 0.25s;
+    background-color: #fff;
+}
+
+.burger__close span:nth-child(1) {
+    height: 0%;
+    width: 3px;
+    position: absolute;
+    top: 5%;
+    left: 52%;
+    transition-delay: 0s;
+}
+
+.burger__close span:nth-child(2) {
+    width: 0;
+    height: 4px;
+    position: absolute;
+    left: 30%;
+    top: 28%;
+    transition-delay: 0.125s;
+}
+
+.burger.open .burger__menu span {
+    width: 0%;
+}
+
+.burger.open .burger__menu span:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.burger.open .burger__menu span:nth-child(2) {
+    transition-delay: 0.125s;
+}
+
+.burger.open .burger__menu span:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.burger.open .burger__close {
+    transition-delay: 2s;
+}
+
+.burger.open .burger__close span:nth-child(1) {
+    height: 30px;
+    transition-delay: 0.375s;
+}
+
+.burger.open .burger__close span:nth-child(2) {
+    width: 30px;
+    transition-delay: 0.5s;
+}
+
+/* ========  ========= */
+/*   Burger menu End  */
+/* ======= ======== */
+
+
+/* ========  ========= */
+/*   Alert Notification Start  */
+/* ======= ======== */
+
+#hideDiv {
+    background: #e3e3e3;
+    max-width: 400px;
+    margin: 0 auto;
+    color: #323232;
+    padding: 10px;
+    text-align: center;
+    
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5px;
+    left: 5px;
+}
+
+#hideDiv span {
+    background-color: black;
+    color: white;
+    padding: 3px 10px 7px;
+    border-radius: 50%;
+    margin-right: 4px;
+    font-weight: 600;
+}
+
+
+/* ========  ========= */
+/*   Alert Notification End  */
+/* ======= ======== */
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+}
+
+/* ===== Back to top ===== */
+
+
+.go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 3%;
+    padding: 20px;
+    display: none;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+}
+
+.go-top:after {
+    font-family: FontAwesome;
+    content: "\f106";
+    background-color: #000000;
+    padding: 10px 14px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    font-size: 13px;
+    border-radius: 50%;
+}
+
+
+.go-top:hover {
+    transition: all .4s linear;
+    transform: scale(1.1);
+}
+
+/* ======== Dark mode (body .dark ) ========= */
+
+body.dark .burger__menu span{
+    background-color: white;
+}

@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1740px;
+    width: 100%;
+    display: table;
+    padding: 0 15px;
+}
+
+
+body {
+	color: black; 
+	background-color: white;
+}
+
+/* ======= Preloader End  ====== */
+
+
+/* ========  ========= */
+/*    Navbar Start  */
+/* ======= ======== */
+
+.navbar-nav {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 100vh;
+    height: 100vh;
+    top: 50px;
+    bottom: 0;
+    padding: 0 30px;
+    right: 0px;
+    opacity: 0;
+    transition: 0s;
+    color: white;
+    visibility: hidden;
+}
+
+.navbar-nav.position_fixed {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 100vh;
+    height: 100vh;
+    bottom: 0;
+    padding: 0 30px;
+    right: 0px;
+    opacity: 1;
+    transition: 1s;
+    color: white;
+    width: 20%;
+    max-width: 20%;
+    visibility: visible;
+    top: 50%;
+    transform: translate(0, -5%);
+}
+
+body .main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding: 0.5rem;
+    transition: 1s;
+    transform: scale(0.9);
+    max-height: calc(100vh - 74px);
+    height: 100%;
+    overflow-y: scroll;
+    width: 80%;
+    max-width: 80%;
+}
+
+body .scroll_spy {
+    position: relative;
+    height: auto;
+    overflow: auto;
+    transition: 1s;
+    transform: scale(1);
+}
+
+.new_body .scroll_spy {
+    margin-top: 30px;
+    position: relative;
+    max-height: calc(100vh - 75px);
+    height: 100%;
+    overflow: auto;
+    transition: 1s;
+    transform: scale(0.9);
+}
+
+body .main section {
+    padding: 1rem;
+    background: #eee;
+    line-height: 28px;
+    box-shadow: 0 3px 7px #222;
+    margin-bottom: 0.5rem;
+}
+
+.new_body .main {
+    transition: 0.5s;
+}
+
+body .navbar {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transition: 0.5s;
+    max-width: 100%;
+    width: auto;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link.active {
+    color: white !important;
+    opacity: 1;
+}
+
+.navbar-nav {
+    position: fixed;
+    right: 0;
+}
+
+.nav-link {
+    color: white !important;
+    opacity: 0.5;
+}
+
+.new_body div#main {
+    transition: 1s !important;
+    transform: scale(1);
+    /* background-color: white; */
+}
+
+/* .wrapper {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    right: 130px;
+} */
+
+/* ====== Black background ===== */
+.new_body {
+    background-color: black;
+}
+
+.new_body .burger__close span {
+    background-color: rgb(255, 255, 255);
+}
+
+/* ========  ========= */
+/*    Navbar End */
+/* ======= ======== */
+
+/* ====== Toggle ===== */
+
+#theme-toggle img.sun {
+    display: none;
+}
+
+#theme-toggle img.moon {
+    display: block;
+}
+
+@media screen and (max-width:575px) {
+    .navbar-nav.position_fixed {
+        padding: 0;
+    }
+}
+
+
+/* ========= Dark Theme ( body.dark ) ====== */
+
+
+body.dark {
+	color: white; 
+	background-color: black;
+}
+
+.dark #theme-toggle img.sun {
+    display: block;
+}
+
+.dark #theme-toggle img.moon {
+    display: none;
+}
+
+body.dark.new_body {
+    background-color: rgb(255, 255, 255);
+}
+
+body.dark.new_body .burger__close span{
+    background-color: black;
+}
+
+body.dark .navbar-nav .nav-link {
+    color: black !important;
+    opacity: 0.5;
+}
+body.dark .navbar-nav .nav-link.active {
+    color: black;
+    opacity: 1;
+}
+
